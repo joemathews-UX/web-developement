@@ -137,3 +137,21 @@ aside img {
 footer {
   margin-top: 10px;
 }
+
+.mainpara{
+  display: block;
+}
+
+.mainparadiv{
+  display: block;
+}
+
+.Paraimage{
+  display: inline;
+ }
+
+ .images{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 6px;
+ }

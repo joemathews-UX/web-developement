@@ -10,11 +10,15 @@
     <h1>Planets Data</h1>
     <table>
         <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>)</caption>
-
+        <colgroup>
+            <col span="1">
+            <col style="border: 2px solid black">
+            <col span="9">
+          </colgroup>
         <thead>
             <tr>
                 <th rowspan="1" colspan="1"></th>
-                <th class="planet-names">Name</th>
+                <th>Name</th>
                 <th>Mass (10<sup>24</sup> kg)</th>
                 <th>Diameter (km)</th>
                 <th>Density (kg/m<sup>3</sup>)</th>
@@ -30,7 +34,7 @@
         <tbody>
             <tr>
                 <th rowspan="4">Terrestrial Planets</th>
-                <th class="planet-names">Mercury</th>
+                <th >Mercury</th>
                 <td>0.330</td>
                 <td>4,879</td>
                 <td>5427</td>
@@ -43,7 +47,7 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Venus</th>
+                <th >Venus</th>
                 <td>4.87</td>
                 <td>12,104</td>
                 <td>5243</td>
@@ -56,7 +60,7 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Earth</th>
+                <th>Earth</th>
                 <td>5.97</td>
                 <td>12,756</td>
                 <td>5514</td>
@@ -69,7 +73,7 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Mars</th>
+                <th>Mars</th>
                 <td>0.642</td>
                 <td>6,792</td>
                 <td>3933</td>
@@ -82,15 +86,9 @@
             </tr>
 
             <tr> 
-                <th rowspan="4">Jovian Planets
-                    <table>
-                        <tr>
-                            <td>Gas giants</td>
-                            <td>Ice giants</td>
-                        </tr>
-                    </table>
-                </th>
-                <th class="planet-names">Jupiter</th>
+                <th rowspan="4">Jovian Planets</th>
+                <th rowspan="2">Gas giants</th>
+                <th >Jupiter</th>
                 <td>1898</td>
                 <td>142,984</td>
                 <td>1326</td>
@@ -103,7 +101,7 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Saturn</th>
+                <th>Saturn</th>
                 <td>568</td>
                 <td>120,536</td>
                 <td>687</td>
@@ -116,7 +114,8 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Uranus</th>
+                <th rowspan="2">Ice giants</th>
+                <th>Uranus</th>
                 <td>86.8</td>
                 <td>51,118</td>
                 <td>1271</td>
@@ -129,7 +128,7 @@
             </tr>
 
             <tr>
-                <th class="planet-names">Neptune</th>
+                <th>Neptune</th>
                 <td>102</td>
                 <td>49,528</td>
                 <td>1638</td>
@@ -143,7 +142,7 @@
 
             <tr>
                 <th rowspan="1">Dwarf Planets</th>
-                <th class="planet-names">Pluto</th>
+                <th>Pluto</th>
                 <td>0.0146</td>
                 <td>2,370</td>
                 <td>2095</td>

@@ -1,36 +1,43 @@
+/* General body styling */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* Sets the default font for the entire page */
 }
 
+/* Styling for the main heading (h1) */
 h1 {
-  color: hotpink;
-  font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-bottom: 10px dotted purple ;
+  color: hotpink; /* Sets the text color to hot pink */
+  font-size: 2em; /* Sets the font size to 2 times the default size */
+  font-family: Georgia, "Times New Roman", Times, serif; /* Sets a specific font family for the heading */
+  border-bottom: 10px dotted purple; /* Adds a dotted purple border at the bottom of the heading */
 }
 
+/* Styling for subheadings (h2) */
 h2 {
-  font-size: 1.5em;
-  font-style: italic;
+  font-size: 1.5em; /* Sets the font size to 1.5 times the default size */
+  font-style: italic; /* Makes the text italic */
 }
 
+/* Styling for elements with the class "job-title" */
 .job-title {
-  color: #999999;
-  font-weight: bold;
+  color: #999999; /* Sets the text color to a light gray */
+  font-weight: bold; /* Makes the text bold */
 }
 
+/* Styling for links in their default and visited states */
 a:link,
 a:visited {
-  color: #fb6542;
+  color: #fb6542; /* Sets the link color to a shade of orange */
 }
 
+/* Styling for links when hovered over */
 a:hover {
-  text-decoration: none;
-  color: green;
+  text-decoration: none; /* Removes the underline on hover */
+  color: green; /* Changes the link color to green on hover */
 }
 
+/* Styling for elements with the class "border" */
 .border {
-  border: 5px solid purple;
-  background-color: #eeeeee;
-  padding: 1em;
+  border: 5px solid purple; /* Adds a solid purple border with a thickness of 5px */
+  background-color: #eeeeee; /* Sets the background color to a light gray */
+  padding: 1em; /* Adds padding inside the border to create space around the content */
 }

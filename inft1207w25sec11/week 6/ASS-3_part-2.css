@@ -2,4 +2,7 @@ html {
   font-family: sans-serif;
 }
 
-/* Your CSS below here */
+
+.style{
+  width: 200px ;
+}

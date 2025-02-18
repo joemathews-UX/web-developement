@@ -9,14 +9,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; 
-  text-align: center; 
-  font-size: 18px;
-  color: white ;
+  line-height: 150px; /* Vertically center text by matching line-height to height */
+    margin: 0 auto; /* Center horizontally using auto margins */
+    text-align: center; /* Center text horizontally */
+    font-size: 1.125rem; /* 1.125 × 16px (default) = 18px */
+    color: white ;
     text-shadow: 1px 1px 1px black;
     border-radius: 10px;
     border: 1px solid red;
-    background-color: red;
+    background-color: red; /* Base color */
     background-image: linear-gradient(
       to bottom right,
       transparent 0%,
@@ -24,7 +25,7 @@ html {
       rgba(0, 0, 0, 0.2) 100%
     );
     box-shadow: 
-      2px 2px 5px rgba(0, 0, 0, 0.3), 
-      inset 1px 1px 3px rgba(255, 255, 255, 0.5),
-      inset -1px -1px 3px rgba(0, 0, 0, 0.5); 
-}
+      2px 2px 5px rgba(0, 0, 0, 0.3), /* Outer shadow */
+      inset 1px 1px 3px rgba(255, 255, 255, 0.5), /* Top-left inset */
+      inset -1px -1px 3px rgba(0, 0, 0, 0.5); /* Bottom-right inset */
+  }

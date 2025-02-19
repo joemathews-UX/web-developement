@@ -43,3 +43,12 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+/* Fonts */
+@font-face {
+  font-family: 'SerifFont';
+  src: url('serif-font.woff2') format('woff2'),
+       url('serif-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

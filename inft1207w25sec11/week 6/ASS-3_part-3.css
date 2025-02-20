@@ -65,3 +65,12 @@ h1{
   font-size: 3rem;
   text-align: center;
 }
+
+h1,h2 {
+  font-family: 'SansSerifFont', sans-serif;
+  letter-spacing: 2px;
+}
+
+h2{
+  font-size: 2rem;
+}

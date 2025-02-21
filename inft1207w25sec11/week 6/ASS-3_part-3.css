@@ -70,3 +70,8 @@ h1,h2{
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
 }
+
+h1{
+  font-size: 5rem;
+  text-align: center;
+}

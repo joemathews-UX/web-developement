@@ -56,3 +56,9 @@ nav a {
   grid-template-columns: 3fr 1fr;
   gap: 20px;
 }
+
+nav{
+  position: sticky;
+    top: 0;
+    z-index: 1000;
+}

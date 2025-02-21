@@ -104,3 +104,7 @@ a[href="http"] {
   background-size: contain;
   color: #a66;
 }
+
+a:link{
+  color: #a66;
+}

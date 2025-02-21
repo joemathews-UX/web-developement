@@ -74,3 +74,8 @@ nav ul{
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
 }
+
+.feature {
+  float: left;
+  margin: 0 15px 15px 0;
+}

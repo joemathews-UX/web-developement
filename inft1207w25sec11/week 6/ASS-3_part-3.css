@@ -65,3 +65,8 @@ html{
   font-family: lovatoligth, serif;
   font-size: 10px;
 }
+
+h1,h2{
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+}

@@ -108,3 +108,8 @@ a[href="http"] {
 a:link{
   color: #a66;
 }
+
+a:focus, a:hover{
+  text-decoration: none;
+  color: #a66;
+}

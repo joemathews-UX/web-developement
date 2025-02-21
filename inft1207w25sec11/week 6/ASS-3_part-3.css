@@ -84,3 +84,10 @@ h2{
 section h2 + p {
   text-align: 20px;
 }
+
+p, li{
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}

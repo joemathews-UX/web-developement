@@ -91,3 +91,8 @@ p, li{
   letter-spacing: 0.5px;
   word-spacing: 3px;
 }
+
+a{
+  outline: none;
+  text-decoration: underline;
+}

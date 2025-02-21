@@ -47,5 +47,12 @@ nav a {
 }
 
 .feature {
-    width: 200px;
+    width: 200px; 
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
 }

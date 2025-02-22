@@ -172,3 +172,9 @@ aside p a{
   color:  #a66;
 }
 
+nav ul li {
+  list-style-type: none; /* Removes the bullets */
+  padding: 0;            /* Removes default padding */
+  margin: 0;             /* Removes default margin */
+  
+}

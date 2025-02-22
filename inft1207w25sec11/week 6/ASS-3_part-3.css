@@ -159,3 +159,16 @@ nav li a:active{
   color: white;
   background: black;
 }
+
+ol li a{
+  color: #a66;
+}
+
+aside ul a {
+  color: #a66;
+}
+
+aside p a{
+  color:  #a66;
+}
+

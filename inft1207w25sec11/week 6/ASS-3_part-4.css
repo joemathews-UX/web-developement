@@ -1,81 +1,95 @@
+/* Base styles for the body */
 body {
-  background-color: #fff;
-  color: #333;
-  margin: 0;
-  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  background-color: #fff; /* Sets a white background */
+  color: #333; /* Sets dark gray text color */
+  margin: 0; /* Removes default body margin */
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif; /* Sets font size, line height, and font family */
 }
 
+/* Makes images responsive */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%; /* Ensures images don’t overflow their container */
+  display: block; /* Removes space below images caused by inline display */
 }
 
+/* Logo styling */
 .logo {
-  font-size: 200%;
-  padding: 50px 20px;
-  margin: 0 auto;
-  max-width: 980px;
+  font-size: 200%; /* Enlarges logo text */
+  padding: 50px 20px; /* Adds space inside the logo container */
+  margin: 0 auto; /* Centers the logo horizontally */
+  max-width: 980px; /* Restricts the logo container width */
 }
 
+/* Grid container for main content */
 .grid {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 980px;
+  margin: 0 auto; /* Centers the grid */
+  padding: 0 20px; /* Adds horizontal padding */
+  max-width: 980px; /* Limits grid width */
 }
 
+/* Navigation bar styles */
 nav {
-  background-color: #000;
-  padding: .5em;
+  background-color: #000; /* Sets a black background */
+  padding: .5em; /* Adds padding inside the nav */
 }
 
+/* Navigation list styling */
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  list-style: none; /* Removes bullet points */
 }
 
+/* Navigation links */
 nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: .5em 1em;
+  color: #fff; /* Sets link text color to white */
+  text-decoration: none; /* Removes underline from links */
+  padding: .5em 1em; /* Adds space around link text */
 }
 
+/* Styles for photo list */
 .photos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* Removes bullet points */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
 }
 
+/* Featured image styling */
 .feature {
-    width: 200px; 
+  width: 200px; /* Sets a fixed width */
 }
 
-/* My css code */
+/* ----- Enhanced Layout and Functionality ----- */
 
-.grid{
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
+/* Grid layout for the main content */
+.grid {
+  display: grid; /* Enables CSS Grid layout */
+  grid-template-columns: 3fr 1fr; /* Creates two columns: 3 parts content, 1 part sidebar */
+  gap: 20px; /* Adds space between columns */
 }
 
-nav{
-  position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Sticky navigation bar */
+nav {
+  position: sticky; /* Keeps nav fixed on scroll */
+  top: 0; /* Sticks to the top */
+  z-index: 1000; /* Ensures nav stays above other content */
 }
 
-nav ul{
-  display: flex;
-  justify-content: space-between;
+/* Horizontal navigation menu */
+nav ul {
+  display: flex; /* Displays list items in a row */
+  justify-content: space-between; /* Evenly spaces nav links */
 }
 
-.photos{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+/* Grid layout for photos */
+.photos {
+  display: grid; /* Enables CSS Grid */
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 1px; /* Small gap between photos */
 }
 
+/* Float featured image with margins */
 .feature {
-  float: left;
-  margin: 0 15px 15px 0;
+  float: left; /* Positions the image to the left of surrounding content */
+  margin: 0 15px 15px 0; /* Adds space around the image */
 }

@@ -149,3 +149,13 @@ nav li a {
   color: #a66;
   margin-block: 5px;
 }
+
+nav li a:focus , nav li a:hover{
+  color: white;
+  background: #a66;
+}
+
+nav li a:active{
+  color: white;
+  background: black;
+}

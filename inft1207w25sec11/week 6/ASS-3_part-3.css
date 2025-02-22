@@ -61,16 +61,19 @@
   font-style: normal;
 }
 
+/* The font for html */
 html{
   font-family: lovatoligth, serif;
   font-size: 10px;
 }
 
+/*Add font for the headings and space*/
 h1,h2{
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
 }
 
+/* Adding size and aligns to both heading */
 h1{
   font-size: 5rem;
   text-align: center;
@@ -81,10 +84,12 @@ h2{
   font-weight: bold;
 }
 
+/* Adding aligns to the section heading and paragraph*/
 section h2 + p {
-  text-align: 20px;
+  text-indent: 20px;
 }
 
+/* desining the paragraph with space , heigth and size of font*/
 p, li{
   font-size: 1.6rem;
   line-height: 1.5;
@@ -92,11 +97,14 @@ p, li{
   word-spacing: 3px;
 }
 
+/* code for the link */
+/*outlineand decoration for the link */
 a{
   outline: none;
   text-decoration: underline;
 }
 
+/* Adding the image to the the link part */
 a[href*="http"] {
   padding-right: 19px;
   background: url(external-link-52.png) no-repeat 100% 0;
@@ -104,7 +112,7 @@ a[href*="http"] {
   background-size: contain;
   color: #a66;
 }
-
+/* Add color for the link in a */
 a:link{
   color: #a66;
 }
@@ -122,48 +130,58 @@ a:active{
                0px 0px 4px black;
 }
 
+/* make change in list section, both order and unorderlist*/
+/* margin both the list*/
 ul ol{
   margin: 1.6rem 0;
 }
 
+/*make the ul list in square design */
 aside ul{
   list-style-type: square;
 }
 
+/* make the ol list in style-type */
 ol{
   list-style-type: lower-latin;
 }
-nav ul{
-  padding-left: 0;
-  margin-bottom: 0.8rem;
+
+
+/* Styles for the navigation menu */
+nav ul {
+  padding-left: 0; /* Removes default left padding from the unordered list */
+  margin-bottom: 0.8rem; /* Adds space below the navigation list */
 }
 
 nav li a {
-  text-decoration: none;
-  display: inline-block;
-  width: 100%;
-  line-height: 3;
-  text-align: center;
-  font-size: 2.5rem;
-  border: 1px solid #a66;
-  color: #a66;
-  margin-block: 5px;
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Makes links behave like block elements while flowing inline */
+  width: 100%; /* Ensures links take full width of their container */
+  line-height: 3; /* Increases vertical spacing inside the link */
+  text-align: center; /* Centers the text inside the link */
+  font-size: 2.5rem; /* Sets a large font size for the links */
+  border: 1px solid #a66; /* Adds a solid border with a reddish color */
+  color: #a66; /* Sets the text color to match the border */
+  margin-block: 5px; /* Adds vertical spacing between links */
 }
 
+/* add color for the list  in block and background */
 nav li a:focus , nav li a:hover{
-  color: white;
-  background: #a66;
+  color: whitesmoke;
+  background-color: #a66;
 }
 
 nav li a:active{
   color: white;
-  background: black;
+  background-color: black;
 }
 
+/*add color for ol list */
 ol li a{
   color: #a66;
 }
 
+/* add color to the top course choice in both list and paragrah*/
 aside ul a {
   color: #a66;
 }

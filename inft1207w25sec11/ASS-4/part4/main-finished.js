@@ -1,5 +1,11 @@
-// set up canvas
+// Name: Joe Jacob
+// Student Number: 100977645
+// Date: April 04, 2025
+// Description: This JavaScript document is designed to present a bouncing ball platform
 
+// ---------------------------
+// Setup canvas
+// ---------------------------
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const ballCountDisplay = document.querySelector("p");
@@ -8,13 +14,11 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
 // function to generate random number
-
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // function to generate random RGB color value
-
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
@@ -37,7 +41,6 @@ class Ball extends Shape {
     this.size = size;
     this.exists = true;
   }
-
 
   draw() {
     ctx.beginPath();
@@ -69,7 +72,7 @@ class Ball extends Shape {
 
   collisionDetect() {
     for (const ball of balls) {
-      if (!(this === ball)) {
+      if (!(this === ball) && ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -149,7 +152,6 @@ class EvilCircle extends Shape {
     }
   }
 }
-
 
 // Create balls
 const balls = [];

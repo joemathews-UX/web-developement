@@ -109,3 +109,6 @@ function loop() {
 
   requestAnimationFrame(loop);
 }
+
+// start animation
+loop();

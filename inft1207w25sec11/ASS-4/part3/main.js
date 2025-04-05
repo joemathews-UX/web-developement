@@ -1,74 +1,79 @@
-// setup canvas
+// Name: Joe Jacob
+// Student Number: 100977645
+// Date: April 04, 2025
+// Description: This JavaScript document is designed to present a bouncing ball platform
 
+// ---------------------------
+// Setup canvas
+// ---------------------------
+
+// Get canvas element and its drawing context
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+// Set canvas dimensions to full browser window
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
+// ---------------------------
+// Utility functions
+// ---------------------------
 
+// Generate a random number between min and max (inclusive)
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// function to generate random color
-
+// Generate a random RGB color string
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-// Ball class
+// ---------------------------
+// Ball class definition
+// ---------------------------
 class Ball {
   constructor(x, y, velX, velY, color, size) {
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
-    this.color = color;
-    this.size = size;
+    this.x = x;         // Horizontal position
+    this.y = y;         // Vertical position
+    this.velX = velX;   // Horizontal velocity
+    this.velY = velY;   // Vertical velocity
+    this.color = color; // Ball color
+    this.size = size;   // Radius of the ball
   }
 
-// draw ball
+  // Draw the ball on the canvas
   draw() {
-    ctx.beginPath();
-    ctx.fillStyle = this.color;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.fill();
+    ctx.beginPath(); // Start drawing path
+    ctx.fillStyle = this.color; // Set fill color
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI); // Draw circle
+    ctx.fill(); // Fill the circle
   }
 
-  // update ball position
+  // Update ball position and reverse direction when hitting canvas edges
   update() {
-    if ((this.x + this.size) >= width) {
-      this.velX = -(this.velX);
+    if ((this.x + this.size) >= width || (this.x - this.size) <= 0) {
+      this.velX = -this.velX; // Reverse horizontal direction
     }
 
-    if ((this.x - this.size) <= 0) {
-      this.velX = -(this.velX);
+    if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+      this.velY = -this.velY; // Reverse vertical direction
     }
 
-    if ((this.y + this.size) >= height) {
-      this.velY = -(this.velY);
-    }
-
-    if ((this.y - this.size) <= 0) {
-      this.velY = -(this.velY);
-    }
-
-    this.x += this.velX;
-    this.y += this.velY;
+    this.x += this.velX; // Move horizontally
+    this.y += this.velY; // Move vertically
   }
 
-
-// collision detection
+  // Check for collisions with other balls and change colors if they collide
   collisionDetect() {
     for (const ball of balls) {
-      if (this !== ball) {
+      if (this !== ball) { // Avoid comparing the ball to itself
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
+          // If balls collide, assign a new random color to both
           ball.color = this.color = randomRGB();
         }
       }
@@ -76,39 +81,46 @@ class Ball {
   }
 }
 
+// ---------------------------
+// Create multiple Ball instances
+// ---------------------------
 
-// create balls
 const balls = [];
 
 while (balls.length < 25) {
-  const size = random(10, 20);
+  const size = random(10, 20); // Random size for each ball
   const ball = new Ball(
-    // ball position always drawn at least one ball width
-    // away from the edge of the canvas, to avoid drawing errors
+    // Ensure balls are drawn within canvas bounds
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-7, 7),
-    random(-7, 7),
-    randomRGB(),
+    random(-7, 7), // Horizontal speed
+    random(-7, 7), // Vertical speed
+    randomRGB(),   // Random color
     size
   );
 
-  balls.push(ball);
+  balls.push(ball); // Add new ball to the array
 }
 
-// animation loop
-function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-  ctx.fillRect(0, 0, width, height);
+// ---------------------------
+// Animation loop
+// ---------------------------
 
+function loop() {
+  // Create semi-transparent black background for trailing effect
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height); // Clear canvas with transparency
+
+  // Draw and update each ball
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    ball.draw();            // Draw the ball
+    ball.update();          // Update position
+    ball.collisionDetect(); // Handle collisions
   }
 
+  // Repeat animation on next frame
   requestAnimationFrame(loop);
 }
 
-// start animation
+// Start the animation
 loop();

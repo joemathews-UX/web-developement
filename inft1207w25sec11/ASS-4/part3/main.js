@@ -37,26 +37,40 @@ class Ball {
     ctx.fill();
   }
 
-// update ball position
-update() {
-  if ((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
+  // update ball position
+  update() {
+    if ((this.x + this.size) >= width) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.x - this.size) <= 0) {
+      this.velX = -(this.velX);
+    }
+
+    if ((this.y + this.size) >= height) {
+      this.velY = -(this.velY);
+    }
+
+    if ((this.y - this.size) <= 0) {
+      this.velY = -(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
   }
 
-  if ((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
-  }
+// collision detection
+  collisionDetect() {
+    for (const ball of balls) {
+      if (this !== ball) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-  if ((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
+      }
+    }
   }
-
-  if ((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
-  }
-
-  this.x += this.velX;
-  this.y += this.velY;
-}
-  
 }

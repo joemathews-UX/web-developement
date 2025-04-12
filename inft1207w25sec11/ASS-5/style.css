@@ -260,4 +260,5 @@ article, footer, .secondary {
   height: 1px;
   padding: 0;
   margin: -1px;
+  overflow: hidden;
 }

@@ -45,3 +45,10 @@ function submitComment() {
   nameField.value = '';
   commentField.value = '';
 }
+
+showHideBtn.tabIndex = 0; // Make it focusable
+showHideBtn.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    this.click();
+  }
+});

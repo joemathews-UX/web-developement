@@ -254,3 +254,6 @@ article, footer, .secondary {
   color: black;
 }
 
+.visually-hidden {
+  position: absolute;
+}

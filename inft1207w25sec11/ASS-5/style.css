@@ -256,4 +256,5 @@ article, footer, .secondary {
 
 .visually-hidden {
   position: absolute;
+  width: 1px;
 }
